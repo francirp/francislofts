@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      redirect_to :back, notice: "Thanks, #{@contact.name}! Your contact information was successfully submitted."
+      redirect_to root_url, notice: "Thanks, #{@contact.name}! Your contact information was successfully submitted."
     else
       render :new
     end
