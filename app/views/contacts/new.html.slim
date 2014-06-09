@@ -1,0 +1,14 @@
+.row.large-6.small-12.small-centered.columns.contact-form
+  center = image_tag "FrancisLofts&Bunks.png"
+  = simple_form_for @contact do |f|
+    - if notice
+      .alert-box.success.radius data-alert=""
+        = notice
+        = link_to "&times;".html_safe, '#', class: 'close'
+    = f.error_notification
+    = f.input :name
+    = f.input :company
+    = f.input :email
+    = f.input :phone
+    = f.input :note
+    = f.submit "Submit Contact Info", class: 'button'

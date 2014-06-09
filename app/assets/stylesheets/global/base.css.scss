@@ -1,0 +1,45 @@
+label{ color:$dark-grey; font-family:$sans-bold; }
+body,html {
+  background-color:#FAFAFA;
+  font-family:$sans-regular;
+  font-size: $fontsize-base;
+}
+h1, h2, h3, h4, h5, h6{ font-family:$sans-light; font-weight:200; }
+
+p{ color:$light-black; font-family:$serif-regular; }
+
+hr{ margin:80px 0; }
+
+a{ color:$dark-grey; @include transition (all 0.2s ease-in-out);
+
+  &:hover{ color:$dark-grey; text-decoration:none; }
+}
+
+//TYPOGRAPHY
+
+  //HEADER STYLES
+  .biggest-header{ font-size:$fontsize-toobig; margin:25px auto 30px; }
+  .big-header{ font-size:$fontsize-huge + 5px; }
+  .sub-header{ font-size:$fontsize-big }
+  .body-header{ font-size:$fontsize-huge; font-family:$sans-light; font-weight:200; margin: 0 0 0.75em; }
+  .small-label{ font-family:$sans-bold; font-size:$fontsize-small; margin-bottom:0; text-transform:uppercase; }
+  .small-text{ font-size:$fontsize-small; }
+
+
+  //TEXT STYLES
+  .text-caps{ text-transform:uppercase; }
+
+  //TEXT ALIGN
+  .text-center{ text-align:center; }
+  .text-left{ text-align:left;}
+  .text-right{ text-align:right; }
+
+  //TEXT COLORS
+  .text-white{ color:$base-white; }
+  .text-blue{ color:$base-blue; }
+  .text-green{ color:$dark-green; }
+
+  //TEXT WEIGHTS
+  .text-bold{ font-family:$sans-bold; }
+  .text-thin{ font-family: $sans-light; }
+  .text-regular{ font-family:$sans-regular; }
