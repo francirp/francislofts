@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module Francislofts
   class Application < Rails::Application
 
+    config.assets.initialize_on_precompile = false
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
@@ -19,7 +20,6 @@ module Francislofts
         request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
 
-        config.assets.initialize_on_precompile = false
         # config.action_mailer.delivery_method = :smtp
         # config.action_mailer.default_url_options = { :host => ENV['APPLICATION_ROOT_URL'] }
         # config.action_mailer.perform_deliveries = true
