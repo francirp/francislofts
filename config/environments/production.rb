@@ -1,19 +1,5 @@
 Rails.application.configure do
-  
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { :host => ENV['APPLICATION_ROOT_URL'] }
-    config.action_mailer.perform_deliveries = true
 
-    config.action_mailer.smtp_settings = {
-      address: "smtp.mandrillapp.com",
-      port: 587,
-      domain: ENV['algofast_root_url'],
-      authentication: "plain",
-      enable_starttls_auto: true,
-      user_name: ENV['EMAIL'],
-      password: ENV['EMAIL_PASSWORD']
-    }
-  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -42,7 +28,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
