@@ -1,5 +1,6 @@
 class SiteMailer < ActionMailer::Base
-  default from: "info@adultbunkbeds.com"
+  default from: "Francis Lofts & Bunks <info@adultbunkbeds.com>"
+  default from: "PayValet <support@payvalet.io>", bcc: "support@payvalet.io"
 
   def self.admin_email_address
     "ryan@francislofts.com"
