@@ -20,19 +20,19 @@ module Francislofts
         request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
 
-        # config.action_mailer.delivery_method = :smtp
-        # config.action_mailer.default_url_options = { :host => ENV['APPLICATION_ROOT_URL'] }
-        # config.action_mailer.perform_deliveries = true
+        config.action_mailer.delivery_method = :smtp
+        config.action_mailer.default_url_options = { :host => ENV['APPLICATION_ROOT_URL'] }
+        config.action_mailer.perform_deliveries = true
 
-        # config.action_mailer.smtp_settings = {
-        #   address: "smtp.mandrillapp.com",
-        #   port: 587,
-        #   domain: ENV['algofast_root_url'],
-        #   authentication: "plain",
-        #   enable_starttls_auto: true,
-        #   user_name: ENV['EMAIL'],
-        #   password: ENV['EMAIL_PASSWORD']
-        # }
+        config.action_mailer.smtp_settings = {
+          address: "smtp.mandrillapp.com",
+          port: 587,
+          domain: ENV['APPLICATION_ROOT_URL'],
+          authentication: "plain",
+          enable_starttls_auto: true,
+          user_name: ENV['EMAIL'],
+          password: ENV['EMAIL_PASSWORD']
+        }
     end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
